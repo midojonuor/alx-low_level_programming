@@ -9,9 +9,9 @@ int main(void)
 {
 	int iter = 0;
 
-	for (iter = 0; iter < 26; ++iter)
+	for (iter = 0; iter < 16; ++iter)
 	{
-		if ( iter > 9)
+		if (iter > 9)
 		{
 			putchar('a' + iter - 10);
 		}
