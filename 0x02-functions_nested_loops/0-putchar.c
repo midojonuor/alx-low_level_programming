@@ -12,7 +12,7 @@ int main(void)
 
 	for(i = 0; i < (int)sizeof(strArr); ++i)
 	{
-		_putchar(strArr[i];
+		_putchar(strArr[i]);
 	}	
 	return (0);
 }
