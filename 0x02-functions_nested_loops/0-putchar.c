@@ -8,7 +8,7 @@
 int main(void)
 {
 	int i = 0;
-	char strArr[] = "_putchar\n";
+	char strArr[] = "_putchar";
 
 	for(i = 0; i < (int)sizeof(strArr); ++i)
 	{
