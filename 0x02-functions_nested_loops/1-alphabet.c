@@ -5,7 +5,7 @@
  * Description: 'the program's description'
  * Return: Always 0 (Success)
  */
-int main(void)
+void print_alphabet(void)
 {
 	int i = 0;
 
@@ -14,5 +14,4 @@ int main(void)
 		_putchar('a' + i);
 	}
 	_putchar('\n');
-	return (0);
 }
