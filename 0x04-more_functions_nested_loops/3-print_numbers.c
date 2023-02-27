@@ -1,8 +1,3 @@
-/*
- * File: 3-print_numbers.c
- * Auth: Brennan D Baraban
- */
-
 #include "main.h"
 
 /**

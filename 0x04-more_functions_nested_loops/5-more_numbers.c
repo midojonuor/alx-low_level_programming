@@ -1,8 +1,3 @@
-/*
- * File: 5-more_numbers.c
- * Auth: Brennan D Baraban
- */
-
 #include "main.h"
 
 /**
