@@ -13,17 +13,17 @@ char *_strcat(char *dest, char *src)
     int src_size = 0;
     int index = 0;
     char *concStr = NULL;
-
+    
     while (dest[dest_size] != '\0')
     {
         dest_size += 1;
     }
-
+    
     while (src[src_size] != '\0')
     {
         src_size += 1;
     }
-
+    
     concStr = (char *) malloc(sizeof(char) * (dest_size + src_size - 1));
 
     for (index = 0; index < (dest_size - 1); ++index)
@@ -36,5 +36,5 @@ char *_strcat(char *dest, char *src)
         concStr[index] = src[index];
     }
 
-    return concStr;
+    return (concStr);
 }
