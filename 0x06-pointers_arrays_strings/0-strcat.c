@@ -11,6 +11,7 @@ char *_strcat(char *dest, char *src)
 {
     int dest_size = 0;
     int src_size = 0;
+	int concStr_size = 0;
     int index = 0;
     char *concStr = NULL;
     
@@ -18,23 +19,27 @@ char *_strcat(char *dest, char *src)
     {
         dest_size += 1;
     }
-    
+	
     while (src[src_size] != '\0')
     {
         src_size += 1;
     }
-    
-    concStr = (char *) malloc(sizeof(char) * (dest_size + src_size - 1));
 
-    for (index = 0; index < (dest_size - 1); ++index)
+	concStr_size = dest_size + src_size;
+    
+    concStr = (char *) malloc(sizeof(char) * concStr_size);
+
+    for (index = 0; index < dest_size; ++index)
     {
         concStr[index] = dest[index];
     }
     
-    for (index = 0; index < (src_size - 1); ++index)
+    for (index = dest_size; index < concStr_size; ++index)
     {
-        concStr[index] = src[index];
+        concStr[index] = src[index - dest_size];
     }
+
+	concStr[concStr_size - 1] = '\0';
 
     return (concStr);
 }
