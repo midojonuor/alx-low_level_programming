@@ -2,43 +2,23 @@
 #include "stdlib.h"
 
 /**
- * _strcat - function that concatenates two strings
- * @dest: pointer to destnation
- * @src: pointer to source
- * Return: pointer to char
+ * strcat - Concatenates the string pointed to by @src, including the terminating
+ *          null byte, to the end of the string pointed to by @dest.
+ * @dest: A pointer to the string to be concatenated upon.
+ * @src: The source string to be appended to @dest.
+ *
+ * Return: A pointer to the destination string @dest.
  */
-char *_strcat(char *dest, char *src)
+char *strcat(char *dest, const char *src)
 {
-	int dest_size = 0;
-	int src_size = 0;
-	int concStr_size = 0;
-	int index = 0;
-	char *concStr = NULL;
+	int index = 0, dest_len = 0;
 
-	while (dest[dest_size] != '\0')
-	{
-		dest_size += 1;
-	}
+	while (dest[index++])
+		dest_len++;
 
-	while (src[src_size] != '\0')
-	{
-		src_size += 1;
-	}
+	for (index = 0; src[index]; index++)
+		dest[dest_len++] = src[index];
 
-	concStr_size = dest_size + src_size;
-	concStr = (char *) malloc(sizeof(char) * concStr_size);
-
-	for (index = 0; index < dest_size; ++index)
-	{
-		concStr[index] = dest[index];
-	}
-
-	for (index = dest_size; index < concStr_size; ++index)
-	{
-		concStr[index] = src[index - dest_size];
-	}
-
-	concStr[concStr_size - 1] = '\0';
-
-	return (concStr);
+	return (dest);
 }
+
