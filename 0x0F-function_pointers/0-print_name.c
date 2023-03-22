@@ -1,14 +1,10 @@
 #include "function_pointers.h"
-
-
+#include <stdlib.h>
 
 /**
- * print_name - Returns a pointer to a 2-dimensional array of
- *               integers with each element initalized to 0.
- * @name: The width of the 2-dimensional array.
- * @f: The height of the 2-dimensional array.
- *
- * Return: void
+ * print_name - Prints a name.
+ * @name: The name to be printed.
+ * @f: A pointer to a function that prints a name.
  */
 void print_name(char *name, void (*f)(char *))
 {
