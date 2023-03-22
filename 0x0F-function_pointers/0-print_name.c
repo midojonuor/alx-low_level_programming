@@ -3,10 +3,10 @@
 
 
 /**
- * alloc_grid - Returns a pointer to a 2-dimensional array of
+ * print_name - Returns a pointer to a 2-dimensional array of
  *               integers with each element initalized to 0.
- * @width: The width of the 2-dimensional array.
- * @height: The height of the 2-dimensional array.
+ * @name: The width of the 2-dimensional array.
+ * @f: The height of the 2-dimensional array.
  *
  * Return: void
  */
